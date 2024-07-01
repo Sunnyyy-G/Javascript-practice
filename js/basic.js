@@ -1,5 +1,6 @@
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
+console.log(myHeading);
 
 function setUserName() {
     let myName = prompt('请输入你的名字');
@@ -15,7 +16,7 @@ if (!localStorage.getItem('name')) {
     setUserName();
 } else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = `酷毙了，${myName}`;
+    myHeading.textContent = `酷毙了，${storedName}`;
 }
 
 myButton.onclick = function() {
